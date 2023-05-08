@@ -44,7 +44,7 @@
 
                 <!-- CKEDITOR -->
                 <div class="col-12">
-                    <script src="{{asset('assets/ckeditor5-build-classic/ckeditor.js')}}"></script>
+                    <script src="{{secure_url('assets/ckeditor5-build-classic/ckeditor.js')}}"></script>
                     <label for="inputContenu" class="form-label">Contenu</label>
                     <textarea name="contenu" id="editor">{{$article->contenu}}</textarea>
                     <script>
