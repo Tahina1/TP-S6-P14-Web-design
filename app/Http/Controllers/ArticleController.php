@@ -74,6 +74,7 @@ class ArticleController extends Controller
     public function update(Request $request){
         if ($request->session()->has('admin')) {
             // ...
+            dd($request->file('image'));
             $file = $request->file('image');
             if (isset($file)) {
                 $base64 = base64_encode(file_get_contents($file->getRealPath()));
