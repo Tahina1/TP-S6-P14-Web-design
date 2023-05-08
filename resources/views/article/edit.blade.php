@@ -60,7 +60,7 @@
                 <div class="col-12">
                     <div class="card" style="width: 100px; height: 100px;">
                         <label for="inputFile" class="form-label">Image</label>
-                        <img src="data:image/jpeg;base64,{{ $article->picture }}" class="card-img-top" alt="...">
+                        <img src="data:image/jpeg;base64,{{$article->picture}}" class="card-img-top" alt="{{$article->title}}">
                     </div>
                     <input class="form-control" type="file" name="image" id="formFile">
                 </div>

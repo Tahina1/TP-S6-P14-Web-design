@@ -77,14 +77,13 @@ class ArticleController extends Controller
             $file = $request->file('image');
             if ($file) {
                 $base64 = base64_encode(file_get_contents($file->getRealPath()));
-            } else {
-                $base64 = null;
+                $article->picture = $base64;
             }
             $article = Article::findOrFail($request->input('id'));
             $article->titre = $request->input('titre');
             $article->synopsis = $request->input('resume');
             $article->contenu = $request->input('contenu');
-            $article->picture = $base64;
+
 
             $article->save();
             return redirect('/');
