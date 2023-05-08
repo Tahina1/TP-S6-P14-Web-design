@@ -74,10 +74,10 @@ class ArticleController extends Controller
     public function update(Request $request){
         if ($request->session()->has('admin')) {
             // ...
-            dd($request->file('image'));
             $file = $request->file('image');
             if (isset($file)) {
                 $base64 = base64_encode(file_get_contents($file->getRealPath()));
+                dd($base64);
                 $article->picture = $base64;
             }
             $article = Article::findOrFail($request->input('id'));
