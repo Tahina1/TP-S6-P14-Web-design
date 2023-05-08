@@ -26,6 +26,23 @@ Route::post('/update', [ArticleController::class,'update']);
 
 Route::get('/delete-article/{id}', [ArticleController::class,'delete']);
 
+Route::middleware('cache.headers:public;max_age=3600;etag')->group(function () {
+    Route::get('/stats/{any}', function ($mylink) {
+        $path = 'my-vendor/' . $mylink;
+
+        // $path=str_replace('/','\\',$path);
+        // dd(File::exists(($path)),$path);
+        if (File::exists(($path))) {
+            $contentType=(new MymeType())->mime_type($path);
+            $response = new Illuminate\Http\Response(File::get(($path)), 200);
+            $response->header('Content-Type', $contentType);
+            return $response;
+        } else {
+            abort(404);
+        }
+    })->where('any', '.*');
+});
+
 
 
 
