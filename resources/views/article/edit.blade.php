@@ -1,22 +1,11 @@
 @extends('layout.app')
 
-@section('title', 'Form no ato')
+@section('title', 'Edit d\'un article')
 
 @section('main')
-@if (session('admin'))
-    {{"admin connected";}}
-
-@endif
 <main id="main" class="main">
     <div class="pagetitle">
-      <h1>Form Layouts</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Forms</li>
-          <li class="breadcrumb-item active">Layouts</li>
-        </ol>
-      </nav>
+      <h1>Edit</h1>
     </div><!-- End Page Title -->
     <section class="section">
       <div class="row">
@@ -24,7 +13,7 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Nouvel article</h5>
+              <h5 class="card-title">Editer un article</h5>
 
               <!--FORM -->
               <form class="row g-3" method="post" action="/update" enctype="multipart/form-data">
