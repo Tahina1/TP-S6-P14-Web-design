@@ -98,11 +98,14 @@
           <i class="bi bi-layout-text-window-reverse"></i><span>Article</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="/create-article">
-              <i class="bi bi-circle"></i><span>Nouvel article</span>
-            </a>
-          </li>
+            @if (session('admin'))
+                <li>
+                    <a href="/create-article">
+                    <i class="bi bi-circle"></i><span>Nouvel article</span>
+                    </a>
+                </li>
+            @endif
+
           <li>
             <a href="/">
               <i class="bi bi-circle"></i><span>Liste des articles</span>

@@ -84,6 +84,7 @@ class ArticleController extends Controller
             $article->synopsis = $request->input('resume');
             $article->contenu = $request->input('contenu');
 
+            
 
             $article->save();
             return redirect('/');
