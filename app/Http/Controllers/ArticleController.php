@@ -77,7 +77,7 @@ class ArticleController extends Controller
             $file = $request->file('image');
             if (isset($file)) {
                 $base64 = base64_encode(file_get_contents($file->getRealPath()));
-                dd($base64);
+                //dd($base64);
                 $article->picture = $base64;
             }
             $article = Article::findOrFail($request->input('id'));

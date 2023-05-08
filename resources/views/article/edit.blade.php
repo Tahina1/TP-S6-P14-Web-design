@@ -18,7 +18,7 @@
               <!--FORM -->
               <form class="row g-3" method="post" action="/update" enctype="multipart/form-data">
                 @csrf
-                <input type="hidden" class="form-control" id="inputTitre" name="id" value="{{$article->id}}">
+                <input type="hidden" class="form-control" id="inputTitre" name="id" value={{$article->id}}>
                 <!-- TITRE -->
                 <div class="col-12">
                   <label for="inputTitre" class="form-label">Titre</label>
