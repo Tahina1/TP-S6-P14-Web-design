@@ -27,16 +27,16 @@
                         <p class="card-text"><a href="/articles/{{$article->id}}" class="btn btn-primary form-control">Voir detail</a></p>
                     </div>
                     <br/>
-                    @if (1==2)<!--session('admin') -->
-                        <div class="row">
+                    <!--session('admin') -->
+                        <!--div class="row">
                             <div class="col-lg-6">
-                                <p class="card-text"><a href="/edit-article/{{$article->id}}" class="btn btn-success form-control">Editer</a></p>
-                            </div>
+                                <p class="card-text"-->
+                            <!--/div>
                             <div class="col-lg-6">
-                                <p class="card-text"><a href="/articles/{{$article->id}}" class="btn btn-danger form-control">Supprimer</a></p>
+                            <p class="card-text"><a href="/articles/{{/*$article->id*/}}" class="btn btn-danger form-control">Supprimer</a></p>
                             </div>
-                        </div>
-                    @endif
+                    </div-->
+
 
                 </div>
                 </div><!-- End Card with titles, buttons, and links -->
