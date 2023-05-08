@@ -75,7 +75,7 @@ class ArticleController extends Controller
         if ($request->session()->has('admin')) {
             // ...
             $file = $request->file('image');
-            if ($file) {
+            if (isset($file)) {
                 $base64 = base64_encode(file_get_contents($file->getRealPath()));
                 $article->picture = $base64;
             }
@@ -84,7 +84,7 @@ class ArticleController extends Controller
             $article->synopsis = $request->input('resume');
             $article->contenu = $request->input('contenu');
 
-            
+            dd($article);
 
             $article->save();
             return redirect('/');
